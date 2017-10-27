@@ -1,0 +1,61 @@
+{
+  "films": [
+    {
+      "id": 1,
+      "name": "yuiy",
+      "year": 78,
+      "genre": "Ciencia Ficción",
+      "voters": 6896,
+      "totalVotes": 689697,
+      "raiting": "100.01"
+    },
+    {
+      "name": "a",
+      "year": 225,
+      "genre": "Acción",
+      "voters": 4245223523,
+      "totalVotes": 35,
+      "raiting": "0.00",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "oj",
+      "year": 687,
+      "genre": "Acción",
+      "voters": 3,
+      "totalVotes": 67,
+      "raiting": "22.33"
+    },
+    {
+      "name": {
+        "0": {},
+        "1": {},
+        "filmName": {}
+      },
+      "year": null,
+      "genre": {
+        "0": {
+          "0": {},
+          "1": {},
+          "2": {}
+        },
+        "1": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {}
+        },
+        "filmGenre": {
+          "0": {},
+          "1": {},
+          "2": {}
+        }
+      },
+      "voters": {},
+      "totalVotes": {},
+      "raiting": "NaN",
+      "id": 4
+    }
+  ]
+}

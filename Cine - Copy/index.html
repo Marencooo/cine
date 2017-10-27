@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="librerias/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-sm-push-3">
+            <form id="addFilmForm" action="" method="post" onsubmit="addFilm(event, this)">
+                <fieldset>
+                    <legend>Ingresar películas</legend>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="filmName">Nombre:</label>
+                        <input class="" id="filmName" type="text" name="filmName" placeholder="Ingresar nombre de la película" class="insertFilmInput" required />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="filmYear">Año:</label>
+                        <input id="filmYear" type="number" min="0" max="2500" name="filmYear" placeholder="Ingresar el año de la película" class="insertFilmInput"
+                        required />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="filmGenre">Género:</label>
+                        <select id="filmGenre" class="insertFilmInput" style="width: 50%" required>
+                            <option value="Acción">Acción</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Ciencia Ficción">Ciencia Ficción</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="filmVoters">Votantes:</label>
+                        <input id="filmVoters" type="number" min="1" name="filmVoters" placeholder="Ingresar cantidad de votantes" class="insertFilmInput"
+                        required />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="filmTotalVotes">Total de votos:</label>
+                        <input id="filmTotalVotes" type="number" min="1" name="filmTotalVotes" placeholder="Ingresar total de votos" class="insertFilmInput"
+                        required />
+                    </div>
+
+                    <input type="submit" value="Guardar" class="filmFormButton" />
+                    <input type="button" value="Limpiar" class="filmFormButton" style="margin-right: 5px;" ONCLICK="ClearTable()" />
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <form id="TableFilter" action="" method="post" style="text-align: start;" onsubmit="Filters(this)">
+        <fieldset>
+            <legend>Ingresar filtros</legend>
+
+            <label for="filmName">Nombre:</label>
+            <input id="filmName" type="text" name="filmName" placeholder="Ingresar nombre de la película" class="insertFilmInput"/>
+
+            <label for="filmYear">Año:</label>
+            <input id="filmYear" type="number" min="0" max="2500" name="filmYear" placeholder="Ingresar el año de la película" class="insertFilmInput" />
+
+            <label for="filmGenre">Género:</label>
+            <select id="filmGenre" class="insertFilmInput" style="width: 71%">
+                <option value="no filter">No filtrar</option>
+                <option value="Acción">Acción</option>
+                <option value="Drama">Drama</option>
+                <option value="Ciencia Ficción">Ciencia Ficción</option>
+            </select>
+
+            <label for="puntaje">Puntaje:</label>
+            <input id="puntaje" type="number" min="1" name="puntaje" class="insertFilmInput" />
+
+            <input type="submit" value="Filtrar" class="filmFormButton" />
+            <input type="button" value="Limpiar" class="filmFormButton" style="margin-right: 5px;" ONCLICK="ClearTableFilter()" />
+        </fieldset>
+    </form>
+    <table id="TableFilm" border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Año</th>
+            <th>Género</th>
+            <th>Puntaje</th>
+        </tr>
+    </table>
+</div>
+    <script src="index.js"></script>
+</body>
+
+</html>
